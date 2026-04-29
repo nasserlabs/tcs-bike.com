@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TCS Bike — L'histoire de Théo, Cyril et Sausset. Passion cyclisme transmise de père en fils.">
+  <title>Notre Histoire — TCS Bike</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚴</text></svg>">
+</head>
+<body>
+
+<!-- ══ NAVBAR ══════════════════════════════════════════════ -->
+<header class="navbar" id="navbar">
+  <div class="container navbar__inner">
+    <a href="index.html" class="navbar__logo">
+      <div class="navbar__logo-wrap">
+        <span>TCS<span>&nbsp;Bike</span></span>
+        <span class="navbar__logo-badge">Théo · Cyril · Sausset</span>
+      </div>
+    </a>
+    <nav class="navbar__nav">
+      <a href="index.html"   class="navbar__link">Accueil</a>
+      <a href="catalog.html" class="navbar__link">Catalogue</a>
+      <a href="about.html"   class="navbar__link">Notre histoire</a>
+      <a href="contact.html" class="navbar__link">Contact</a>
+    </nav>
+    <div class="navbar__actions">
+      <a href="cart.html" class="cart-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+        Panier
+        <span class="cart-count" id="cart-count">0</span>
+      </a>
+      <button class="navbar__hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="navbar__mobile" id="mobile-nav">
+  <a href="index.html"   class="navbar__mobile-link">Accueil</a>
+  <a href="catalog.html" class="navbar__mobile-link">Catalogue</a>
+  <a href="about.html"   class="navbar__mobile-link active">Notre histoire</a>
+  <a href="contact.html" class="navbar__mobile-link">Contact</a>
+  <a href="cart.html"    class="navbar__mobile-link">Panier</a>
+</nav>
+
+<!-- ══ PAGE HEADER ════════════════════════════════════════ -->
+<div class="page-header" data-title="Histoire">
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="index.html">Accueil</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Notre histoire</span>
+    </nav>
+    <div class="label" style="margin-bottom:12px">Qui sommes-nous</div>
+    <h1 class="display-lg">Notre <span class="text-accent">Histoire</span></h1>
+    <p class="body-lg text-muted" style="margin-top:16px;max-width:600px">
+      TCS Bike, c'est l'histoire d'une passion transmise, d'un père et de son fils,
+      et d'un rêve devenu réalité.
+    </p>
+  </div>
+</div>
+
+<!-- ══ SECTION 1 : L'origine ══════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="about-story" data-reveal>
+      <div class="about-story__visual">
+        <!-- Image représentant un cycliste sur route -->
+        <svg viewBox="0 0 480 600" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;background:#111">
+          <!-- Fond dégradé route -->
+          <defs>
+            <linearGradient id="road" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#0d1a10"/>
+              <stop offset="100%" stop-color="#0B0B0B"/>
+            </linearGradient>
+            <radialGradient id="glow1" cx="50%" cy="40%" r="50%">
+              <stop offset="0%" stop-color="#00FF88" stop-opacity="0.12"/>
+              <stop offset="100%" stop-color="transparent"/>
+            </radialGradient>
+          </defs>
+          <rect width="480" height="600" fill="url(#road)"/>
+          <rect width="480" height="600" fill="url(#glow1)"/>
+          <!-- Lignes de route stylisées -->
+          <line x1="240" y1="600" x2="100" y2="200" stroke="#1a2a1c" stroke-width="80"/>
+          <line x1="240" y1="600" x2="380" y2="200" stroke="#1a2a1c" stroke-width="80"/>
+          <!-- Vélo stylisé SVG -->
+          <g transform="translate(150, 260) scale(0.75)">
+            <!-- Roues -->
+            <circle cx="60" cy="140" r="55" fill="none" stroke="#00FF88" stroke-width="4" opacity="0.8"/>
+            <circle cx="60" cy="140" r="40" fill="none" stroke="#00FF88" stroke-width="1" opacity="0.3"/>
+            <circle cx="60" cy="140" r="6" fill="#00FF88" opacity="0.9"/>
+            <circle cx="220" cy="140" r="55" fill="none" stroke="#00FF88" stroke-width="4" opacity="0.8"/>
+            <circle cx="220" cy="140" r="40" fill="none" stroke="#00FF88" stroke-width="1" opacity="0.3"/>
+            <circle cx="220" cy="140" r="6" fill="#00FF88" opacity="0.9"/>
+            <!-- Rayons -->
+            <line x1="60" y1="85"  x2="60" y2="195" stroke="#00FF88" stroke-width="1.5" opacity="0.4"/>
+            <line x1="5" y1="140"  x2="115" y2="140" stroke="#00FF88" stroke-width="1.5" opacity="0.4"/>
+            <line x1="21" y1="101" x2="99" y2="179"  stroke="#00FF88" stroke-width="1.5" opacity="0.4"/>
+            <line x1="99" y1="101" x2="21" y2="179"  stroke="#00FF88" stroke-width="1.5" opacity="0.4"/>
+            <line x1="220" y1="85"  x2="220" y2="195" stroke="#00FF88" stroke-width="1.5" opacity="0.4"/>
+            <line x1="165" y1="140" x2="275" y2="140" stroke="#00FF88" stroke-width="1.5" opacity="0.4"/>
+            <line x1="181" y1="101" x2="259" y2="179" stroke="#00FF88" stroke-width="1.5" opacity="0.4"/>
+            <line x1="259" y1="101" x2="181" y2="179" stroke="#00FF88" stroke-width="1.5" opacity="0.4"/>
+            <!-- Cadre -->
+            <polygon points="60,140 140,55 220,140" fill="none" stroke="white" stroke-width="3" opacity="0.9"/>
+            <line x1="140" y1="55"  x2="140" y2="140" stroke="white" stroke-width="3" opacity="0.7"/>
+            <line x1="60"  y1="140" x2="220" y2="140" stroke="white" stroke-width="2" opacity="0.5"/>
+            <!-- Guidon -->
+            <line x1="140" y1="55" x2="130" y2="35" stroke="white" stroke-width="3" opacity="0.8"/>
+            <line x1="120" y1="35" x2="148" y2="35" stroke="white" stroke-width="3" opacity="0.8"/>
+            <!-- Selle -->
+            <line x1="140" y1="55" x2="160" y2="55" stroke="white" stroke-width="4" opacity="0.8"/>
+            <!-- Pédalier -->
+            <circle cx="140" cy="140" r="14" fill="none" stroke="#00FF88" stroke-width="2.5" opacity="0.7"/>
+            <line x1="130" y1="153" x2="115" y2="170" stroke="#00FF88" stroke-width="2.5" opacity="0.7"/>
+            <line x1="150" y1="153" x2="165" y2="170" stroke="#00FF88" stroke-width="2.5" opacity="0.7"/>
+          </g>
+          <!-- Texte décoratif -->
+          <text x="240" y="500" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="42" fill="#00FF88" opacity="0.12" letter-spacing="8">TCS BIKE</text>
+          <text x="240" y="540" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-size="13" fill="#999" opacity="0.6" letter-spacing="4">PASSION · PERFORMANCE · TRANSMISSION</text>
+        </svg>
+
+        <div class="about-story__visual-accent">
+          <div class="label" style="margin-bottom:6px">TCS Bike</div>
+          <p style="font-size:14px;color:var(--white-muted);line-height:1.5">
+            Théo · Cyril · Sausset<br>
+            <span style="color:var(--accent)">Fondée en 2024</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="about-story__content">
+        <div>
+          <div class="label" style="margin-bottom:12px">Le commencement</div>
+          <h2 class="display-md">Tout a commencé<br><span class="text-accent">sur la route</span></h2>
+        </div>
+        <p>
+          TCS Bike est née d'une histoire simple et universelle : un père, son fils, 
+          et une passion commune pour le vélo. Cyril roule depuis toujours. Des descentes 
+          de montagne aux longues sorties dominicales, le vélo a rythmé sa vie, ses week-ends, 
+          ses moments de liberté.
+        </p>
+        <p>
+          Puis vint Théo. Naturellement, comme une évidence, le fils a hérité de la passion 
+          du père. Leurs premières sorties ensemble — Théo sur un petit vélo rouge, Cyril 
+          à ses côtés — ont marqué le début d'une aventure qui ne s'est jamais arrêtée.
+        </p>
+        <p>
+          Avec le temps, leur amour commun du vélo est devenu un projet : créer une boutique 
+          qui leur ressemble. Honnête, passionnée, exigeante sur la qualité.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ SECTION 2 : Le nom ══════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="about-story about-story--reverse" data-reveal>
+      <div class="about-story__content">
+        <div>
+          <div class="label" style="margin-bottom:12px">Le nom</div>
+          <h2 class="display-md">Pourquoi <span class="text-accent">TCS</span> ?</h2>
+        </div>
+        <p>
+          TCS, ce sont trois lettres qui résument tout. 
+          <strong style="color:var(--white)">T</strong> comme <em style="color:var(--accent)">Théo</em>, 
+          <strong style="color:var(--white)">C</strong> comme <em style="color:var(--accent)">Cyril</em>, 
+          <strong style="color:var(--white)">S</strong> comme <em style="color:var(--accent)">Sausset</em>.
+          Leur nom de famille, leur identité, leur fierté.
+        </p>
+        <p>
+          Choisir de mettre leur nom dans le nom de la boutique, c'était une façon de 
+          s'engager pleinement. De mettre leur réputation, leur intégrité et leur passion 
+          derrière chaque produit vendu, chaque conseil donné, chaque client accompagné.
+        </p>
+        <p>
+          TCS Bike, c'est une promesse familiale : vous donner le meilleur, toujours.
+        </p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
+          <div style="background:var(--black-card);border:1px solid var(--black-border);border-radius:var(--radius-sm);padding:16px 20px;text-align:center">
+            <div style="font-family:var(--font-display);font-size:36px;color:var(--accent)">T</div>
+            <div style="font-family:var(--font-cond);font-size:12px;color:var(--white-muted);text-transform:uppercase;letter-spacing:0.1em">Théo</div>
+          </div>
+          <div style="background:var(--black-card);border:1px solid var(--black-border);border-radius:var(--radius-sm);padding:16px 20px;text-align:center">
+            <div style="font-family:var(--font-display);font-size:36px;color:var(--accent)">C</div>
+            <div style="font-family:var(--font-cond);font-size:12px;color:var(--white-muted);text-transform:uppercase;letter-spacing:0.1em">Cyril</div>
+          </div>
+          <div style="background:var(--black-card);border:1px solid var(--black-border);border-radius:var(--radius-sm);padding:16px 20px;text-align:center">
+            <div style="font-family:var(--font-display);font-size:36px;color:var(--accent)">S</div>
+            <div style="font-family:var(--font-cond);font-size:12px;color:var(--white-muted);text-transform:uppercase;letter-spacing:0.1em">Sausset</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-story__visual">
+        <svg viewBox="0 0 480 600" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;background:#111">
+          <defs>
+            <linearGradient id="grad2" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#0B0B0B"/>
+              <stop offset="100%" stop-color="#0d1a10"/>
+            </linearGradient>
+          </defs>
+          <rect width="480" height="600" fill="url(#grad2)"/>
+          <!-- Grandes lettres TCS -->
+          <text x="240" y="200" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="180" fill="none" stroke="#00FF88" stroke-width="1.5" opacity="0.15" letter-spacing="-10">TCS</text>
+          <text x="240" y="200" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="180" fill="#00FF88" opacity="0.06" letter-spacing="-10">TCS</text>
+          <!-- Cercles décoratifs -->
+          <circle cx="240" cy="300" r="180" fill="none" stroke="#00FF88" stroke-width="1" opacity="0.08"/>
+          <circle cx="240" cy="300" r="120" fill="none" stroke="#00FF88" stroke-width="1" opacity="0.06"/>
+          <circle cx="240" cy="300" r="60"  fill="none" stroke="#00FF88" stroke-width="1" opacity="0.1"/>
+          <!-- Points cardinaux -->
+          <circle cx="240" cy="120" r="5" fill="#00FF88" opacity="0.5"/>
+          <circle cx="420" cy="300" r="5" fill="#00FF88" opacity="0.5"/>
+          <circle cx="240" cy="480" r="5" fill="#00FF88" opacity="0.5"/>
+          <circle cx="60"  cy="300" r="5" fill="#00FF88" opacity="0.5"/>
+          <!-- Lignes -->
+          <line x1="240" y1="120" x2="420" y2="300" stroke="#00FF88" stroke-width="0.5" opacity="0.15"/>
+          <line x1="420" y1="300" x2="240" y2="480" stroke="#00FF88" stroke-width="0.5" opacity="0.15"/>
+          <line x1="240" y1="480" x2="60"  y2="300" stroke="#00FF88" stroke-width="0.5" opacity="0.15"/>
+          <line x1="60"  y1="300" x2="240" y2="120" stroke="#00FF88" stroke-width="0.5" opacity="0.15"/>
+          <!-- Texte bas -->
+          <text x="240" y="555" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-size="14" fill="#999" opacity="0.7" letter-spacing="6">THÉO · CYRIL · SAUSSET</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ STATS ═══════════════════════════════════════════════ -->
+<section class="section--sm">
+  <div class="container">
+    <div class="text-center section-header" data-reveal>
+      <div class="label" style="margin-bottom:12px">En chiffres</div>
+      <h2 class="display-md">TCS Bike <span class="text-accent">aujourd'hui</span></h2>
+    </div>
+    <div class="stat-grid" data-reveal>
+      <div class="stat-item">
+        <div class="stat-number">2024</div>
+        <div class="stat-label">Année de création</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">2</div>
+        <div class="stat-label">Fondateurs passionnés</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">50+</div>
+        <div class="stat-label">Références disponibles</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">∞</div>
+        <div class="stat-label">Kilomètres de passion</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ SECTION 3 : Valeurs ════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="text-center section-header" data-reveal>
+      <div class="label" style="margin-bottom:12px">Ce qui nous guide</div>
+      <h2 class="display-md">Nos <span class="text-accent">valeurs</span></h2>
+    </div>
+
+    <div class="grid-3" data-reveal>
+      <div class="card" style="padding:32px">
+        <div style="font-family:var(--font-display);font-size:48px;color:var(--accent);margin-bottom:16px;line-height:1">01</div>
+        <h3 class="heading-md" style="margin-bottom:12px">Passion avant tout</h3>
+        <p class="body-sm text-muted">Nous ne vendons pas des produits. Nous partageons une passion. Chaque conseil est celui d'un ami cycliste, pas d'un commercial.</p>
+      </div>
+      <div class="card" style="padding:32px">
+        <div style="font-family:var(--font-display);font-size:48px;color:var(--accent);margin-bottom:16px;line-height:1">02</div>
+        <h3 class="heading-md" style="margin-bottom:12px">Qualité irréprochable</h3>
+        <p class="body-sm text-muted">Nous testons tout ce que nous vendons. Si ça ne passe pas notre test sur route, ça ne rentre pas dans le catalogue.</p>
+      </div>
+      <div class="card" style="padding:32px">
+        <div style="font-family:var(--font-display);font-size:48px;color:var(--accent);margin-bottom:16px;line-height:1">03</div>
+        <h3 class="heading-md" style="margin-bottom:12px">Transmission</h3>
+        <p class="body-sm text-muted">Comme Cyril a transmis sa passion à Théo, nous voulons transmettre cet amour du vélo à chaque client qui pousse notre porte.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA ═════════════════════════════════════════════════ -->
+<section class="section--sm">
+  <div class="container">
+    <div class="cta-banner" data-reveal>
+      <div class="label" style="margin-bottom:12px">Rejoignez l'aventure</div>
+      <h2 class="display-md cta-banner__title">Prêt à <span class="text-accent">rouler</span> ?</h2>
+      <p class="cta-banner__desc">Découvrez notre sélection de vélos et accessoires premium. Livraison express, conseils personnalisés, qualité garantie.</p>
+      <div class="cta-banner__actions">
+        <a href="catalog.html" class="btn btn-primary btn-lg">Voir le catalogue</a>
+        <a href="contact.html" class="btn btn-outline">Nous contacter</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ═══════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo">TCS <span class="text-accent">Bike</span></div>
+        <p class="footer__tagline">Passion cyclisme, transmise de père en fils.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" class="social-link" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" class="social-link" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.35 6.35 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="footer__heading">Navigation</h3>
+        <ul class="footer__links">
+          <li><a href="index.html"   class="footer__link">Accueil</a></li>
+          <li><a href="catalog.html" class="footer__link">Catalogue</a></li>
+          <li><a href="about.html"   class="footer__link">Notre histoire</a></li>
+          <li><a href="contact.html" class="footer__link">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer__heading">Catégories</h3>
+        <ul class="footer__links">
+          <li><a href="catalog.html" class="footer__link">Vélos de route</a></li>
+          <li><a href="catalog.html" class="footer__link">VTT</a></li>
+          <li><a href="catalog.html" class="footer__link">Vélos de ville</a></li>
+          <li><a href="catalog.html" class="footer__link">Accessoires</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer__heading">Informations</h3>
+        <ul class="footer__links">
+          <li><a href="#" class="footer__link">Livraison & retours</a></li>
+          <li><a href="#" class="footer__link">Garanties</a></li>
+          <li><a href="#" class="footer__link">CGV</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="container">
+    <div class="footer__bottom">
+      <span>© 2024 TCS Bike — Théo Cyril Sausset. Tous droits réservés.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Retour en haut">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script type="module">
+  import './js/main.js';
+</script>
+</body>
+</html>

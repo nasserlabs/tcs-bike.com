@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TCS Bike — Contactez-nous pour un conseil, une question ou un devis.">
+  <title>Contact — TCS Bike</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚴</text></svg>">
+</head>
+<body>
+
+<!-- ══ NAVBAR ══════════════════════════════════════════════ -->
+<header class="navbar" id="navbar">
+  <div class="container navbar__inner">
+    <a href="index.html" class="navbar__logo">
+      <div class="navbar__logo-wrap">
+        <span>TCS<span>&nbsp;Bike</span></span>
+        <span class="navbar__logo-badge">Théo · Cyril · Sausset</span>
+      </div>
+    </a>
+    <nav class="navbar__nav">
+      <a href="index.html"   class="navbar__link">Accueil</a>
+      <a href="catalog.html" class="navbar__link">Catalogue</a>
+      <a href="about.html"   class="navbar__link">Notre histoire</a>
+      <a href="contact.html" class="navbar__link">Contact</a>
+    </nav>
+    <div class="navbar__actions">
+      <a href="cart.html" class="cart-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+        Panier
+        <span class="cart-count" id="cart-count">0</span>
+      </a>
+      <button class="navbar__hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="navbar__mobile" id="mobile-nav">
+  <a href="index.html"   class="navbar__mobile-link">Accueil</a>
+  <a href="catalog.html" class="navbar__mobile-link">Catalogue</a>
+  <a href="about.html"   class="navbar__mobile-link">Notre histoire</a>
+  <a href="contact.html" class="navbar__mobile-link active">Contact</a>
+  <a href="cart.html"    class="navbar__mobile-link">Panier</a>
+</nav>
+
+<!-- ══ PAGE HEADER ════════════════════════════════════════ -->
+<div class="page-header" data-title="Contact">
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="index.html">Accueil</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Contact</span>
+    </nav>
+    <div class="label" style="margin-bottom:12px">On est là pour vous</div>
+    <h1 class="display-lg">Contactez<br><span class="text-accent">-nous</span></h1>
+    <p class="body-lg text-muted" style="margin-top:16px;max-width:520px">
+      Une question sur un produit, un conseil pour choisir votre vélo, ou simplement envie de parler vélo ? On répond sous 24h.
+    </p>
+  </div>
+</div>
+
+<!-- ══ FORMULAIRE + INFOS ══════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="contact-layout">
+
+      <!-- Formulaire -->
+      <div data-reveal>
+        <div class="label" style="margin-bottom:16px">Formulaire de contact</div>
+        <h2 class="heading-lg" style="margin-bottom:32px">Envoyez-nous<br>un message</h2>
+
+        <!-- Message succès -->
+        <div class="form-success" id="form-success">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+          Message envoyé ! Nous vous répondrons sous 24h.
+        </div>
+
+        <form id="contact-form" novalidate>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+            <div class="form-group">
+              <label class="form-label" for="contact-name">Prénom *</label>
+              <input type="text" id="contact-name" class="form-input" placeholder="Théo" required autocomplete="given-name">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-lastname">Nom *</label>
+              <input type="text" id="contact-lastname" class="form-input" placeholder="Sausset" required autocomplete="family-name">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="contact-email">Email *</label>
+            <input type="email" id="contact-email" class="form-input" placeholder="theo@email.com" required autocomplete="email">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="contact-subject">Sujet *</label>
+            <select id="contact-subject" class="form-input filter-select" style="padding-right:36px;background-color:var(--black-card)" required>
+              <option value="">Choisir un sujet…</option>
+              <option value="conseil">Conseil produit</option>
+              <option value="commande">Question sur une commande</option>
+              <option value="devis">Demande de devis</option>
+              <option value="sav">Service après-vente</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="contact-message">Message *</label>
+            <textarea id="contact-message" class="form-textarea" placeholder="Décrivez votre demande…" required></textarea>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+            <button type="submit" class="btn btn-primary btn-lg" id="btn-submit">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px">
+                <line x1="22" y1="2" x2="11" y2="13"/>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+              </svg>
+              <span id="btn-submit-text">Envoyer le message</span>
+            </button>
+            <p class="body-sm text-muted">* Champs obligatoires</p>
+          </div>
+        </form>
+      </div>
+
+      <!-- Infos de contact -->
+      <div class="contact-info" data-reveal data-reveal-delay="2">
+        <div>
+          <div class="label" style="margin-bottom:12px">Coordonnées</div>
+          <h2 class="heading-lg" style="margin-bottom:24px">Trouvez-nous</h2>
+        </div>
+
+        <div class="contact-info-card">
+          <div class="contact-info-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.3 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l.77-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="contact-info-title">Téléphone</div>
+            <div class="contact-info-value">+33 6 XX XX XX XX</div>
+            <div class="body-sm text-muted" style="margin-top:4px">Lun–Ven 9h–18h</div>
+          </div>
+        </div>
+
+        <div class="contact-info-card">
+          <div class="contact-info-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <div>
+            <div class="contact-info-title">Email</div>
+            <div class="contact-info-value">contact@tcsbike.fr</div>
+            <div class="body-sm text-muted" style="margin-top:4px">Réponse sous 24h</div>
+          </div>
+        </div>
+
+        <div class="contact-info-card">
+          <div class="contact-info-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div>
+            <div class="contact-info-title">Localisation</div>
+            <div class="contact-info-value">France</div>
+            <div class="body-sm text-muted" style="margin-top:4px">Livraison partout en Europe</div>
+          </div>
+        </div>
+
+        <!-- Réseaux sociaux -->
+        <div>
+          <div class="contact-info-title" style="margin-bottom:16px">Suivez-nous</div>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.35 6.35 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Horaires -->
+        <div class="card" style="padding:24px">
+          <div class="contact-info-title" style="margin-bottom:16px">Horaires</div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="display:flex;justify-content:space-between;font-size:14px">
+              <span class="text-muted">Lundi – Vendredi</span>
+              <span>9h00 – 18h00</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:14px">
+              <span class="text-muted">Samedi</span>
+              <span>9h00 – 12h00</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:14px">
+              <span class="text-muted">Dimanche</span>
+              <span class="text-muted">Fermé</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ═══════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo">TCS <span class="text-accent">Bike</span></div>
+        <p class="footer__tagline">Passion cyclisme, transmise de père en fils.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" class="social-link" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" class="social-link" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.35 6.35 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="footer__heading">Navigation</h3>
+        <ul class="footer__links">
+          <li><a href="index.html"   class="footer__link">Accueil</a></li>
+          <li><a href="catalog.html" class="footer__link">Catalogue</a></li>
+          <li><a href="about.html"   class="footer__link">Notre histoire</a></li>
+          <li><a href="contact.html" class="footer__link">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer__heading">Catégories</h3>
+        <ul class="footer__links">
+          <li><a href="catalog.html" class="footer__link">Vélos de route</a></li>
+          <li><a href="catalog.html" class="footer__link">VTT</a></li>
+          <li><a href="catalog.html" class="footer__link">Vélos de ville</a></li>
+          <li><a href="catalog.html" class="footer__link">Accessoires</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer__heading">Informations</h3>
+        <ul class="footer__links">
+          <li><a href="#" class="footer__link">Livraison & retours</a></li>
+          <li><a href="#" class="footer__link">Garanties</a></li>
+          <li><a href="#" class="footer__link">CGV</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="container">
+    <div class="footer__bottom">
+      <span>© 2024 TCS Bike — Théo Cyril Sausset. Tous droits réservés.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Retour en haut">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script type="module">
+  import './js/main.js';
+  import { showToast } from './js/main.js';
+
+  const form       = document.getElementById('contact-form');
+  const btnText    = document.getElementById('btn-submit-text');
+  const successMsg = document.getElementById('form-success');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const name    = document.getElementById('contact-name').value.trim();
+    const email   = document.getElementById('contact-email').value.trim();
+    const subject = document.getElementById('contact-subject').value;
+    const message = document.getElementById('contact-message').value.trim();
+
+    // Validation simple
+    if (!name || !email || !subject || !message) {
+      showToast('Merci de remplir tous les champs obligatoires.', 'error');
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      showToast('Adresse email invalide.', 'error');
+      return;
+    }
+
+    // Simulation envoi
+    btnText.textContent = 'Envoi en cours…';
+    const btn = document.getElementById('btn-submit');
+    btn.disabled = true;
+    btn.style.opacity = '0.7';
+
+    await new Promise(r => setTimeout(r, 1500));
+
+    // Succès
+    form.style.display = 'none';
+    successMsg.classList.add('visible');
+    showToast('Message envoyé avec succès !');
+  });
+</script>
+</body>
+</html>

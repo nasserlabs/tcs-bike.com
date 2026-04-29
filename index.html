@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TCS Bike — Vélos et accessoires premium. Passion, performance, transmission.">
+  <title>TCS Bike — Performance & Passion</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚴</text></svg>">
+</head>
+<body>
+
+<!-- ══ NAVBAR ══════════════════════════════════════════════ -->
+<header class="navbar" id="navbar">
+  <div class="container navbar__inner">
+    <a href="index.html" class="navbar__logo">
+      <div class="navbar__logo-wrap">
+        <span>TCS<span>&nbsp;Bike</span></span>
+        <span class="navbar__logo-badge">Théo · Cyril · Sausset</span>
+      </div>
+    </a>
+
+    <nav class="navbar__nav" aria-label="Navigation principale">
+      <a href="index.html"   class="navbar__link">Accueil</a>
+      <a href="catalog.html" class="navbar__link">Catalogue</a>
+      <a href="about.html"   class="navbar__link">Notre histoire</a>
+      <a href="contact.html" class="navbar__link">Contact</a>
+    </nav>
+
+    <div class="navbar__actions">
+      <a href="catalog.html" class="btn btn-outline btn-sm">Explorer</a>
+      <a href="cart.html" class="cart-btn" aria-label="Panier">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+        Panier
+        <span class="cart-count" id="cart-count">0</span>
+      </a>
+      <button class="navbar__hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile nav -->
+<nav class="navbar__mobile" id="mobile-nav" aria-label="Navigation mobile">
+  <a href="index.html"   class="navbar__mobile-link">Accueil</a>
+  <a href="catalog.html" class="navbar__mobile-link">Catalogue</a>
+  <a href="about.html"   class="navbar__mobile-link">Notre histoire</a>
+  <a href="contact.html" class="navbar__mobile-link">Contact</a>
+  <a href="cart.html"    class="navbar__mobile-link">Panier</a>
+</nav>
+
+<!-- ══ HERO ════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero__bg"></div>
+
+  <!-- Grille SVG décorative -->
+  <svg class="hero__bg-svg" viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+        <path d="M 60 0 L 0 0 0 60" fill="none" stroke="white" stroke-width="0.5"/>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#grid)"/>
+    <!-- Lignes diagonales -->
+    <line x1="0" y1="900" x2="700" y2="0" stroke="white" stroke-width="0.3" opacity="0.5"/>
+    <line x1="400" y1="900" x2="1100" y2="0" stroke="white" stroke-width="0.3" opacity="0.3"/>
+    <line x1="800" y1="900" x2="1400" y2="200" stroke="white" stroke-width="0.3" opacity="0.2"/>
+    <!-- Cercles déco -->
+    <circle cx="1200" cy="450" r="280" fill="none" stroke="#00FF88" stroke-width="0.5" opacity="0.15"/>
+    <circle cx="1200" cy="450" r="180" fill="none" stroke="#00FF88" stroke-width="0.5" opacity="0.1"/>
+    <circle cx="1200" cy="450" r="80"  fill="none" stroke="#00FF88" stroke-width="1"   opacity="0.2"/>
+  </svg>
+
+  <div class="hero__noise"></div>
+  <div class="hero__accent-circle"></div>
+
+  <div class="container">
+    <div class="hero__content">
+      <div class="hero__eyebrow">
+        <span class="hero__eyebrow-line"></span>
+        <span class="label">Boutique premium · Depuis 2024</span>
+      </div>
+      <h1 class="display-xl hero__title">
+        <span class="line-1">Roulez</span><br>
+        <span class="line-2">Plus Vite.</span><br>
+        <span class="line-1">Plus loin.</span>
+      </h1>
+      <p class="hero__desc">
+        TCS Bike vous équipe pour chaque kilomètre. Vélos de route, VTT, 
+        vélos de ville et accessoires — sélectionnés avec passion par des 
+        cyclistes, pour des cyclistes.
+      </p>
+      <div class="hero__cta">
+        <a href="catalog.html" class="btn btn-primary btn-lg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+          Voir le catalogue
+        </a>
+        <a href="about.html" class="btn btn-outline">Notre histoire</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__scroll" aria-hidden="true">
+    <span>Scroll</span>
+    <span class="hero__scroll-dot"></span>
+  </div>
+</section>
+
+<!-- ══ STATS ═══════════════════════════════════════════════ -->
+<section class="section--sm">
+  <div class="container">
+    <div class="stat-grid">
+      <div class="stat-item" data-reveal>
+        <div class="stat-number">15+</div>
+        <div class="stat-label">Marques partenaires</div>
+      </div>
+      <div class="stat-item" data-reveal data-reveal-delay="1">
+        <div class="stat-number">200+</div>
+        <div class="stat-label">Clients satisfaits</div>
+      </div>
+      <div class="stat-item" data-reveal data-reveal-delay="2">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Conseil personnalisé</div>
+      </div>
+      <div class="stat-item" data-reveal data-reveal-delay="3">
+        <div class="stat-number">48h</div>
+        <div class="stat-label">Livraison express</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ POURQUOI NOUS ════════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header text-center" data-reveal>
+      <div class="label" style="margin-bottom:12px">Notre différence</div>
+      <h2 class="display-md">Pourquoi <span class="text-accent">TCS Bike</span> ?</h2>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-item" data-reveal>
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <h3 class="why-title">Qualité garantie</h3>
+        <p class="why-desc">Chaque produit est sélectionné et testé. Nous ne vendons que ce que nous utilisons nous-mêmes.</p>
+      </div>
+      <div class="why-item" data-reveal data-reveal-delay="1">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+            <line x1="9" y1="9" x2="9.01" y2="9"/>
+            <line x1="15" y1="9" x2="15.01" y2="9"/>
+          </svg>
+        </div>
+        <h3 class="why-title">Conseil expert</h3>
+        <p class="why-desc">Théo et Cyril sont des passionnés de vélo. Leur conseil est honnête, précis et sans prise de tête.</p>
+      </div>
+      <div class="why-item" data-reveal data-reveal-delay="2">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="3" width="15" height="13" rx="1"/>
+            <path d="M16 8h4l3 5v3h-7V8z"/>
+            <circle cx="5.5" cy="18.5" r="2.5"/>
+            <circle cx="18.5" cy="18.5" r="2.5"/>
+          </svg>
+        </div>
+        <h3 class="why-title">Livraison rapide</h3>
+        <p class="why-desc">Expédition sous 24h. Livraison gratuite dès 1 000 € d'achat. Retour facile sous 30 jours.</p>
+      </div>
+      <div class="why-item" data-reveal data-reveal-delay="3">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+            <polyline points="17 6 23 6 23 12"/>
+          </svg>
+        </div>
+        <h3 class="why-title">Prix compétitifs</h3>
+        <p class="why-desc">Boutique indépendante sans intermédiaire. Des prix justes pour un équipement de qualité professionnelle.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ PRODUITS VEDETTES ════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="featured-header" data-reveal>
+      <div>
+        <div class="label" style="margin-bottom:8px">Sélection</div>
+        <h2 class="display-md">Nos <span class="text-accent">Coups de cœur</span></h2>
+      </div>
+      <a href="catalog.html" class="btn btn-ghost">
+        Tout voir
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="grid-3" id="featured-grid">
+      <!-- Injecté par JS -->
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ CTA BANNER ══════════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="cta-banner" data-reveal>
+      <div class="label" style="margin-bottom:16px">Prêt à pédaler ?</div>
+      <h2 class="display-md cta-banner__title">
+        Trouvez votre<br><span class="text-accent">vélo idéal</span>
+      </h2>
+      <p class="cta-banner__desc">
+        Des vélos de route aux VTT, en passant par les vélos de ville — 
+        explorez notre catalogue complet et équipez-vous comme un pro.
+      </p>
+      <div class="cta-banner__actions">
+        <a href="catalog.html" class="btn btn-primary btn-lg">Explorer le catalogue</a>
+        <a href="contact.html" class="btn btn-outline">Nous contacter</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ═══════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo">TCS <span class="text-accent">Bike</span></div>
+        <p class="footer__tagline">Passion cyclisme, transmise de père en fils. Équipez-vous avec les meilleurs.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.35 6.35 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="footer__heading">Navigation</h3>
+        <ul class="footer__links">
+          <li><a href="index.html"   class="footer__link">Accueil</a></li>
+          <li><a href="catalog.html" class="footer__link">Catalogue</a></li>
+          <li><a href="about.html"   class="footer__link">Notre histoire</a></li>
+          <li><a href="contact.html" class="footer__link">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer__heading">Catégories</h3>
+        <ul class="footer__links">
+          <li><a href="catalog.html" class="footer__link">Vélos de route</a></li>
+          <li><a href="catalog.html" class="footer__link">VTT</a></li>
+          <li><a href="catalog.html" class="footer__link">Vélos de ville</a></li>
+          <li><a href="catalog.html" class="footer__link">Accessoires</a></li>
+          <li><a href="catalog.html" class="footer__link">Entretien</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer__heading">Informations</h3>
+        <ul class="footer__links">
+          <li><a href="#" class="footer__link">Livraison & retours</a></li>
+          <li><a href="#" class="footer__link">Garanties</a></li>
+          <li><a href="#" class="footer__link">CGV</a></li>
+          <li><a href="#" class="footer__link">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+  <div class="container">
+    <div class="footer__bottom">
+      <span>© 2024 TCS Bike — Théo Cyril Sausset. Tous droits réservés.</span>
+      <div class="footer__bottom-right">
+        <span>Made with ❤️ &amp; passion</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ BACK TO TOP ══════════════════════════════════════════ -->
+<button class="back-to-top" aria-label="Retour en haut">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"/>
+  </svg>
+</button>
+
+<!-- ══ SCRIPTS ══════════════════════════════════════════════ -->
+<script type="module">
+  import { initCatalogPage, PRODUCTS, productCardHTML } from './js/catalog.js';
+  import './js/main.js';
+
+  // Produits vedettes
+  const featured = PRODUCTS.filter(p => p.featured).slice(0, 3);
+  document.getElementById('featured-grid').innerHTML = featured.map(productCardHTML).join('');
+
+  // Bind add-to-cart sur les cartes vedettes
+  import('./js/cart.js').then(({ addToCart }) => {
+    document.querySelectorAll('#featured-grid .product-card__add').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const id = btn.closest('[data-product-id]').dataset.productId;
+        const product = PRODUCTS.find(p => p.id === id);
+        if (product) addToCart(product);
+      });
+    });
+
+    // Révéler cartes après injection
+    document.querySelectorAll('#featured-grid [data-reveal]').forEach((el, i) => {
+      el.style.transitionDelay = `${i * 0.1}s`;
+      setTimeout(() => el.classList.add('revealed'), 100);
+    });
+  });
+</script>
+</body>
+</html>
